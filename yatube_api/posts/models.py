@@ -30,9 +30,8 @@ class Post(models.Model):
         verbose_name='Сообщество',
     )
 
-    # class Meta:
-    #     ordering = ('-pub_date',)
-    # pytest категорически против сортировки
+    class Meta:
+        ordering = ('pub_date',)
 
     def __str__(self):
         return self.text[:settings.LIMIT_TEXT]
